@@ -6,22 +6,55 @@
   object name, diet, weight, length, period
 */
 
+class Dino {
+  constructor (attr1) {
+      this.name = attr1.name,
+      this.diet = attr1.diet,
+      this.weight = attr1.weight,
+      this.length = attr1.length,
+      this.period = attr1.period
+  }
+}
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
+
+const trex = new Dino ({
+  name: 'Tyrannosaurus',
+  diet: 'Carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceous'
+})
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
+const stego = new Dino ({
+  name: 'Stegosaurus',
+  diet: 'Herbivorous',
+  weight: '2000kg',
+  length: '9m',
+  period: 'Late Jurassic'
+})
+
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
+
+const veloc = new Dino ({
+  name: 'Velociraptor',
+  diet: 'Carnivorous',
+  weight: '15kg',
+  length: '1.8m',
+  period: 'Late Cretaceous'
+})
 
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(trex.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(veloc.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(stego.length);
 
 // What time period did tyrannosaurus live in?
 console.log();
@@ -51,8 +84,16 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-console.log(universities);
+let universities = [];
+
+for (let i = 0; i < graduates.length; i++) {
+  universities.push(graduates[i].university);
+  }
+  
+let sortedUni = [];
+
+
+console.log(universities.sort());
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
